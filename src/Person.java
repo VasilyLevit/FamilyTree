@@ -34,7 +34,7 @@ public class Person {
 
     /**
      * метод для преобразования формата вывода полей экземпляра для последующей печати из main
-     * @return
+     * @return возвращает формат вывода для печати
      */
     public String getInfo() {
         return String.format(familyTies() + ": " + name + " father: " + father);
