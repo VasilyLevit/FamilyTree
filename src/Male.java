@@ -3,8 +3,8 @@
  */
 public class Male extends Person {
     public Male(String name, String father) {
-        this.name = name;
-        this.father = father;
+        super.name = name;
+        super.father = father;
     }
 
     /**

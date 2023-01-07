@@ -1,7 +1,7 @@
 /**
  * Базовый класс для описания сущьности "человек"
  */
-public class Person {
+public class Person implements Ties {
     String name;
     String father;
     private String mother;
@@ -25,13 +25,16 @@ public class Person {
     }
 
     /**
-     * Метод для отработки переопределения метода (полиморфизм)
+     * Метод, который переопределяется в наследуемых классах (полиморфизм)
      * @return возращает переопределённое значение в наследуемых классах
      */
+//    public String familyTies() {
+//        return "You";
+//    }
+    @Override
     public String familyTies() {
         return "You";
     }
-
     /**
      * метод для преобразования формата вывода полей экземпляра для последующей печати из main
      * @return возвращает формат вывода для печати
@@ -39,4 +42,6 @@ public class Person {
     public String getInfo() {
         return String.format(familyTies() + ": " + name + " father: " + father);
     }
+    @Override
+    public String toString() { return String.format(familyTies() + ": " + name + " father: " + father); }
 }
